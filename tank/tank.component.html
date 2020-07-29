@@ -1,0 +1,18 @@
+<div class="col-8  card border-dark  ">
+    <img class="card-img-top" src="{{tank.imgSrc}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"> {{ tank.type }}</h5>
+      <p class="card-text"> {{ tank.description }}</p>
+      <p class="card-text">THE health {{ tank.health }} % </p>
+      <div class="progress">
+  <div class="progress-bar" role="progressbar" [style.width]="(tank.health/100)*100 + '%'" aria-valuenow='tank.health' aria-valuemin="0" aria-valuemax="100">{{ tank.health }}</div>
+</div>
+    </div>
+    <!-- Actions -->
+    <div class="card-footer bg-transparent">
+      <button class="btn-danger" (click)="shoot()">Shoot</button>
+      <button class="btn-primary" (click)="supperShoot()">SupperShoot</button>
+      <button class=" btn-success" (click)="giveHelth()">Give Health</button>
+    </div>
+</div>
+
